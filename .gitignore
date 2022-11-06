@@ -1,3 +1,6 @@
+# Exclude macOS system folders
+.DS_Store
+
 # Logs
 logs
 *.log
