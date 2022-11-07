@@ -1,26 +1,19 @@
 # bcon-43
 
-- HTML - мова розмітки документа, структура, контент сторінки
-- Теги та атрибути
-- Cкелет HTML-документа: `doctype`, `html`, `head`, `body`
-- Метаінформація документа: `title`, `meta`
-- Поняття семантичної розмітки
-- Розмітка текста: `h1...h6`, `p`, `ol || ul`, `a`
-- Зображення: `img` та `figure`
-- Секційні теги: `header`, `footer`, `main`, `section`, `nav`, `article`, `aside`
-- Абсолютний та відносний шлях до файлу
-- Валідація HTML-документа
-- Інструменти розробника: Chrome DevTools. Вкладки Elements, Console, Sources, Network.
+План заняття:
 
-- Символьні підстановки (мнемоніки)
-- Верхні та нижні індекси `sup` та `sub`
-- Акцент на тексті `em || i` та виділення важливості `strong || b`
-- Час `time`
-- Адреса `address`
-- Розмітка таблиць: `table`, `caption`, `tr`, `th || td`, `tbody || thead || tfoot`
-- Розмітка медіаконтенту: `video` та `audio`
-- Тег `span`
-- Тег `button`. Різниця між кнопкою та посиланням
+- Синтаксис CSS: правило, селектор, властивості та значення.
+- Підключення стилей: `inline`, `embedded`, `linked`
+- CSS-селектори: тегу, класу, id, атрибуту, Х > Y дитини, X Y нащадка
+- Псевдокласи стану `:hover`, `:focus`, `:active`
+- Колір тексту: властивість `color`
+- Робота з кольорами: `hex, rgb, rgba`
+- Каскад. Приорітетність. Спадкування.
+- Властивості оформелння тексту: `text-align`, `text-decoration`, `text-transform`, `text-indent`,
+  `line-height`, `letter-spacing`, `word-spacing`, `text-shadow`
+- Сімейства шрифту `serif` та `sans-serif`
+- Властивості оформлення шрифту: `font-size`, `font-weight`, `font-style`, `font-family`
+- Підключення зовнішніх шрифтів через `GoogleFonts`
 
 ---
 
