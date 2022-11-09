@@ -1,3 +1,13 @@
+/* html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+} */
+
 body {
   font-family: sans-serif;
   font-size: 1.5em;
@@ -6,6 +16,16 @@ body {
 [class*='-section']:not(:last-child) {
   margin-bottom: 40px;
 } */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
 
 a {
   color: currentColor;
@@ -18,32 +38,44 @@ button {
   cursor: pointer;
 }
 
+img {
+  display: block;
+}
+
 /**
   |============================
   | Block model
   |============================
 */
+.block-model-section {
+  outline: 3px dashed;
+}
+
 .title {
-  margin: 40px;
+  width: 400px;
+  min-height: 200px;
   padding: 20px;
+  margin-bottom: 100px;
+
   border: 3px solid red;
-  /* outline-offset: -2px; */
+
+  /* border-radius: 50%; */
+
+  /* border-left: 10px dashed lightblue;
+  border-right: 20px dotted yellow;
+  border-bottom: 40px solid transparent; */
 }
 
 .description {
+  width: 400px;
+  height: 200px;
+
+  padding: 20px;
+  margin-bottom: 40px;
+
   outline: 2px solid red;
   outline-offset: -2px;
 }
-/*
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::after,
-*::before {
-  box-sizing: inherit;
-} */
 
 .block {
   width: 400px;
@@ -61,9 +93,11 @@ html {
   | Display property
   |============================
 */
-/* .display-property-section {
-} */
-/*
+.display-property-section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
 .one {
   background-color: yellow;
 }
@@ -72,10 +106,12 @@ html {
 }
 .three {
   background-color: tomato;
-} */
+}
 
 .container {
   width: 800px;
+  padding-left: 10px;
+  padding-right: 10px;
   margin-left: auto;
   margin-right: auto;
 
@@ -86,6 +122,12 @@ html {
 .block-text {
   width: 400px;
 
+  margin-left: 20px;
+  margin-right: 20px;
+
+  margin: 0 auto;
+
+  margin-bottom: 30px;
   padding: 20px;
   background-color: lightgreen;
   color: white;
@@ -124,6 +166,10 @@ html {
   --color3: lightsalmon;
   --color4: blueviolet;
 }
+
+.pseudo-classes-section {
+  background-color: var(--color2);
+}
 .list {
   padding: 0;
   margin: 0;
@@ -137,12 +183,44 @@ html {
 .item {
   padding: 30px;
 
-  margin-bottom: 30px;
-
   color: white;
   text-align: center;
 
   background-color: lightblue;
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+/* .item:first-child {
+  background-color: var(--color1);
+}
+
+.item:last-child {
+  background-color: var(--color2);
+} */
+
+/*
+  an + b
+  a - період циклу
+  n - лічильник циклу (0 = +1)
+  b - зміщення для перебору
+*/
+
+/* .item:nth-child(4) {
+  background-color: var(--color3);
+} */
+/*
+.item:nth-child(even) {
+  background-color: var(--color3);
+}
+.item:nth-child(odd) {
+  background-color: var(--color4);
+} */
+
+/* .item:nth-last-child(n + 5) {
+  background-color: var(--color4);
+} */
+
+.item:not(:last-child) {
+  margin-bottom: 30px;
 }
