@@ -1,0 +1,148 @@
+body {
+  font-family: sans-serif;
+  font-size: 1.5em;
+}
+/*
+[class*='-section']:not(:last-child) {
+  margin-bottom: 40px;
+} */
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+/**
+  |============================
+  | Block model
+  |============================
+*/
+.title {
+  margin: 40px;
+  padding: 20px;
+  border: 3px solid red;
+  /* outline-offset: -2px; */
+}
+
+.description {
+  outline: 2px solid red;
+  outline-offset: -2px;
+}
+/*
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+} */
+
+.block {
+  width: 400px;
+  padding: 40px;
+
+  /* outline: 2px solid red;
+  outline-offset: -2px; */
+
+  background-color: violet;
+  /* color: white; */
+}
+
+/**
+  |============================
+  | Display property
+  |============================
+*/
+/* .display-property-section {
+} */
+/*
+.one {
+  background-color: yellow;
+}
+.two {
+  background-color: blue;
+}
+.three {
+  background-color: tomato;
+} */
+
+.container {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+
+  outline: 2px solid red;
+  outline-offset: -2px;
+}
+
+.block-text {
+  width: 400px;
+
+  padding: 20px;
+  background-color: lightgreen;
+  color: white;
+}
+.img-wrapper {
+  width: 640px;
+  background-color: aqua;
+}
+
+.img-wrapper p {
+  background-color: blueviolet;
+}
+
+.inline-link {
+  background-color: lightseagreen;
+  color: white;
+}
+
+.inline-block-btn {
+  background-color: hotpink;
+  color: white;
+
+  border: 3px solid rgb(169, 24, 226);
+  border-radius: 15px;
+}
+
+/**
+  |============================
+  | Pseudo classes
+  |============================
+*/
+
+:root {
+  --color1: lightgreen;
+  --color2: lightseagreen;
+  --color3: lightsalmon;
+  --color4: blueviolet;
+}
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 500px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.item {
+  padding: 30px;
+
+  margin-bottom: 30px;
+
+  color: white;
+  text-align: center;
+
+  background-color: lightblue;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
