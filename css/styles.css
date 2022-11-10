@@ -18,6 +18,9 @@
 
   /* Others */
   --btn-radius: 25px;
+
+  --indent: 30px;
+  --items: 4;
 }
 
 /**
@@ -46,6 +49,8 @@ p {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .link {
@@ -71,6 +76,11 @@ img {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .container {
@@ -108,6 +118,8 @@ img {
 }
 
 .title {
+  margin-bottom: 20px;
+
   font-family: var(--secondary-font);
   font-size: 42px;
   line-height: calc(49 / 42);
@@ -115,10 +127,14 @@ img {
 }
 
 .title-theme-dark {
+  margin-bottom: 44px;
+
   color: var(--light-txt-cl);
 }
 
 .undertitle {
+  margin-bottom: 20px;
+
   color: var(--dark-txt-cl);
 }
 
@@ -161,6 +177,21 @@ img {
 
 /**
   |============================
+  | Card set
+  |============================
+*/
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--indent);
+}
+
+.card-item {
+  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+}
+
+/**
+  |============================
   | Header
   |============================
 */
@@ -171,8 +202,34 @@ img {
   background-color: var(--dark-bg-cl);
 }
 
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  margin-right: 131px;
+}
+
+.header-nav {
+  margin-right: auto;
+}
+
+.header-list {
+  display: flex;
+  align-items: center;
+}
+
+.header-item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .header-nav-link,
 .header-contact {
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
@@ -188,6 +245,11 @@ img {
   color: var(--accent-txt-cl);
 }
 
+.header-group {
+  display: flex;
+  align-items: center;
+}
+
 .header-contact {
   margin-right: 40px;
 }
@@ -199,6 +261,11 @@ img {
 */
 .hero {
   background-color: #191c26;
+}
+
+.media-list {
+  display: flex;
+  gap: 40px;
 }
 
 .media-link {
@@ -217,6 +284,10 @@ img {
 
 .hero-undertitle {
   width: 360px;
+}
+
+.hero-controls {
+  display: flex;
 }
 
 .hero-controls-btn {
@@ -244,7 +315,23 @@ img {
   | About
   |============================
 */
+.about-container {
+  display: flex;
+  gap: 30px;
+}
+
+.about-list {
+  display: flex;
+  gap: 30px;
+}
+
+.about-right-side {
+  width: 470px;
+}
+
 .about-desc {
+  margin-bottom: 42px;
+
   font-size: 14px;
   line-height: calc(26 / 14);
   letter-spacing: 0.02em;
@@ -260,8 +347,49 @@ img {
   background-color: var(--dark-bg-cl);
 }
 
+.price-block {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 44px;
+}
+
+.price-list {
+  width: 570px;
+  padding: 30px 20px;
+}
+
+.price-list:first-child {
+  outline: 1px solid green;
+}
+.price-list:last-child {
+  outline: 1px solid orangered;
+}
+
 .price-item {
+  display: flex;
+  align-items: baseline;
+
   color: var(--grey-cl);
+}
+
+.price-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.line {
+  margin-right: 12px;
+  margin-left: 12px;
+
+  flex-grow: 1;
+  height: 1px;
+  background-color: rgba(157, 164, 189, 0.12);
+}
+
+.price-btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /**
@@ -269,6 +397,42 @@ img {
   | Benefits
   |============================
 */
+.benefits-container {
+  display: flex;
+  gap: 30px;
+}
+
+.benefits-left-side {
+  width: 570px;
+}
+
+.benefits-list {
+  width: 370px;
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.benefits-item {
+  width: 170px;
+  min-height: 133px;
+  padding: 20px 24px;
+
+  background-color: #f7f7f7;
+}
+
+.benefits-item:nth-child(2n) {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.benefits-right-side {
+  width: 500px;
+}
+
 .benefits-quantity {
   font-weight: 700;
   font-size: 42px;
@@ -304,6 +468,11 @@ img {
   background-color: #f7f7f7;
 }
 
+.team-list {
+  --items: 3;
+  --indent: 50px;
+}
+
 .team-name {
   font-weight: 400;
   font-size: 18px;
@@ -325,6 +494,16 @@ img {
   | Gallery
   |============================
 */
+/* .gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--indent);
+}
+
+.gallery-item {
+  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+} */
+
 /**
   |============================
   | Booking
