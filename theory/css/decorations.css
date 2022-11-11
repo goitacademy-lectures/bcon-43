@@ -1,0 +1,39 @@
+body {
+  width: 100vw;
+  height: 300vh;
+
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+
+  padding-top: 100px;
+}
+
+.wrapper {
+  width: 800px;
+  height: 600px;
+  padding: 30px;
+  /* border: 10px dashed blueviolet; */
+
+  font-size: 10em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-align: center;
+
+  color: transparent;
+
+  border-radius: 10px;
+  background-color: lightblue;
+  /* background-image: url(../images/cookies.jpeg); */
+  background-image: url(../images/pic.jpeg), url(../images/smoke-png.png);
+  background-repeat: no-repeat;
+  background-position: top 50px right 50px, center;
+  background-size: 200px, cover;
+  /*
+  -webkit-background-clip: text;
+  background-clip: text; */
+
+  /* background-attachment: fixed; */
+  /* background-position: top 50% left calc(50% + 320px); */
+}

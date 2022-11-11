@@ -90,8 +90,8 @@ img {
   margin-left: auto;
   margin-right: auto;
 
-  outline: 2px solid red;
-  outline-offset: -2px;
+  /* outline: 2px solid red;
+  outline-offset: -2px; */
 }
 
 .main-title {
@@ -105,6 +105,9 @@ img {
 }
 
 .uppertitle {
+  display: flex;
+  align-items: center;
+
   margin-bottom: 20px;
   font-weight: 600;
   font-size: 11px;
@@ -113,8 +116,22 @@ img {
   text-transform: uppercase;
 }
 
+.uppertitle::before {
+  content: '';
+
+  display: block;
+  margin-right: 20px;
+  width: 60px;
+  height: 1px;
+  background-color: #303030;
+}
+
 .uppertitle-theme-dark {
   color: var(--grey-cl-60);
+}
+
+.uppertitle-theme-dark::before {
+  background-color: rgba(157, 164, 189, 0.6);
 }
 
 .title {
@@ -211,6 +228,10 @@ img {
   margin-right: 131px;
 }
 
+.header-img {
+  fill: #555555;
+}
+
 .header-nav {
   margin-right: auto;
 }
@@ -260,11 +281,20 @@ img {
   |============================
 */
 .hero {
-  background-color: #191c26;
+  /* background-color: #191c26; */
+}
+
+.hero-container {
+  display: flex;
+}
+
+.hero-left-side {
+  width: 100px;
 }
 
 .media-list {
   display: flex;
+  display: none;
   gap: 40px;
 }
 
@@ -282,12 +312,27 @@ img {
   color: var(--accent-txt-cl);
 }
 
+.hero-right-side {
+  flex-grow: 1;
+  padding-top: 272px;
+  padding-bottom: 208px;
+  padding-left: 100px;
+
+  background-color: rgba(25, 28, 38, 0.2);
+  background-image: url(../images/hero/bg-img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 .hero-undertitle {
   width: 360px;
+  margin: 0;
 }
 
 .hero-controls {
   display: flex;
+  display: none;
 }
 
 .hero-controls-btn {
@@ -344,7 +389,15 @@ img {
   |============================
 */
 .price {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+
   background-color: var(--dark-bg-cl);
+  background-image: url(../images/price/img.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-size: cover; */
 }
 
 .price-block {
@@ -360,10 +413,10 @@ img {
 }
 
 .price-list:first-child {
-  outline: 1px solid green;
+  background-image: linear-gradient(180deg, rgb(23, 26, 36, 0.2) 0%, rgba(23, 26, 36, 0.2) 100%);
 }
 .price-list:last-child {
-  outline: 1px solid orangered;
+  background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
 }
 
 .price-item {
@@ -422,6 +475,9 @@ img {
   padding: 20px 24px;
 
   background-color: #f7f7f7;
+
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .benefits-item:nth-child(2n) {
@@ -489,6 +545,38 @@ img {
 
   color: var(--accent-txt-cl);
 }
+
+.socials {
+  display: flex;
+  justify-content: center;
+
+  gap: 10px;
+}
+
+.socials-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  color: #303030;
+
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.socials-link:hover,
+.socials-link:focus {
+  color: #ff6c00;
+  background-color: #555555;
+}
+
+.socials-icon {
+  fill: currentColor;
+}
+
 /**
   |============================
   | Gallery
@@ -510,15 +598,39 @@ img {
   |============================
 */
 .contatcs-group {
+  max-width: 1600px;
+  margin: 0 auto;
+
   background-color: var(--dark-bg-cl);
+  background-image: url(../images/booking/bg-img.png);
+  background-repeat: no-repeat;
+  background-position: top 50% left calc(50% + 393px);
+}
+
+.contatcs-group-container {
+  display: flex;
+  gap: 30px;
+}
+
+.booking {
+  flex-basis: 570px;
 }
 /**
   |============================
   | Contatcs
   |============================
 */
+.contacts {
+  flex-basis: 570px;
+  padding-left: 100px;
+}
 .contacts-address {
+  margin-bottom: 70px;
   font-style: normal;
+}
+
+.contacts-item:not(:last-child) {
+  margin-bottom: 32px;
 }
 
 .contacts-link {
@@ -526,6 +638,10 @@ img {
 }
 
 .contacts-uppertitle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
   font-weight: 600;
   font-size: 11px;
   line-height: calc(15 / 11);
@@ -533,6 +649,17 @@ img {
   text-transform: uppercase;
 
   color: var(--light-txt-cl);
+}
+
+.contacts-uppertitle::before {
+  content: '';
+
+  display: block;
+  margin-right: 20px;
+  width: 60px;
+  height: 1px;
+
+  background-color: rgba(157, 164, 189, 0.4);
 }
 
 .contacts-schedule {
