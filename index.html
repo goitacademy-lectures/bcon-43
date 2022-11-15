@@ -39,7 +39,7 @@ We work quickly, carefully and with style."
         <nav class="header-nav">
           <ul class="list header-list">
             <li class="header-item">
-              <a class="header-nav-link link" href="#about">About</a>
+              <a class="header-nav-link current link" href="#about">About</a>
             </li>
             <li class="header-item">
               <a class="header-nav-link link" href="#price">Services and prices</a>
@@ -54,7 +54,7 @@ We work quickly, carefully and with style."
         </nav>
         <div class="header-group">
           <a class="header-contact link" href="tel:+380441111111">+38 044 111 11 11</a>
-          <button class="btn btn-theme-dark" type="button">Online-booking</button>
+          <button class="btn btn-theme-dark" type="button" data-modal-open>Online-booking</button>
         </div>
       </div>
     </header>
@@ -80,9 +80,14 @@ We work quickly, carefully and with style."
               We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
             </p>
           </div>
+          <ul class="hero-pagination list">
+            <li class="hero-pagination-item active"></li>
+            <li class="hero-pagination-item"></li>
+            <li class="hero-pagination-item"></li>
+          </ul>
           <ul class="hero-controls list">
             <li class="hero-controls-item">
-              <button class="hero-controls-btn prev" type="button">Back</button>
+              <button class="hero-controls-btn prev" type="button" disabled>Back</button>
             </li>
             <li class="hero-controls-item">
               <button class="hero-controls-btn next" type="button">Forward</button>
@@ -374,16 +379,6 @@ We work quickly, carefully and with style."
                   </a>
                 </li>
               </ul>
-
-              <ul>
-                <li>
-                  <a href="">
-                    <svg class="" width="" height="">
-                      <use href=""></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
             </li>
           </ul>
         </div>
@@ -402,6 +397,12 @@ We work quickly, carefully and with style."
                 width="270"
                 height="360"
               />
+              <div class="overlay">
+                <p class="overlay-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias corrupti
+                  distinctio iusto autem culpa
+                </p>
+              </div>
             </li>
             <li class="gallery-item card-item">
               <img
@@ -489,5 +490,18 @@ We work quickly, carefully and with style."
         </ul>
       </div>
     </footer>
+
+    <!-- Modal window -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-btn" type="button" data-modal-close>
+          <svg class="modal-btn-icon" width="28" height="28">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
