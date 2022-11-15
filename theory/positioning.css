@@ -1,0 +1,83 @@
+body {
+  width: 100vw;
+  height: 300vh;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+
+  padding: 20px;
+}
+.section {
+  padding: 40px;
+  border: 3px dashed tomato;
+  border-radius: 10px;
+}
+
+.wrapper {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 800px;
+  height: 600px;
+  border-radius: 10px;
+  background-color: lightblue;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 200px;
+  height: 200px;
+  font-size: 3em;
+  color: azure;
+  background-color: lightseagreen;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.box:nth-child(2) {
+  background-color: blueviolet;
+}
+
+.fixed-btn {
+  width: 50px;
+  height: 50px;
+
+  background-color: hotpink;
+  border: none;
+  border-radius: 50%;
+
+  background-image: url(https://media.tenor.com/ritUGKDg2rQAAAAM/nyan-cat.gif);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  cursor: pointer;
+}
+
+/**
+  |============================
+  | Positioning
+  |============================
+*/
+/* .box:nth-child(2) {
+  position: relative;
+  top: 50px;
+} */
+
+.box:nth-child(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.fixed-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
