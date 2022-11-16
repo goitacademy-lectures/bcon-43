@@ -24,12 +24,17 @@ We work quickly, carefully and with style."
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
     />
+    <!-- Animation -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <!-- Custom styles -->
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <!-- Header section -->
-    <header class="header">
+    <header class="header" data-header>
       <div class="container header-container">
         <a class="header-logo" href="">
           <svg class="header-img" width="68" height="58">
@@ -54,7 +59,13 @@ We work quickly, carefully and with style."
         </nav>
         <div class="header-group">
           <a class="header-contact link" href="tel:+380441111111">+38 044 111 11 11</a>
-          <button class="btn btn-theme-dark" type="button" data-modal-open>Online-booking</button>
+          <button
+            class="btn btn-theme-dark animate__animated animate__bounce animate__delay-2s"
+            type="button"
+            data-modal-open
+          >
+            Online-booking
+          </button>
         </div>
       </div>
     </header>
@@ -64,7 +75,7 @@ We work quickly, carefully and with style."
       <section class="hero">
         <div class="container hero-container">
           <div class="hero-left-side">
-            <ul class="media-list list">
+            <ul class="hero-media-list media-list list">
               <li class="media-item">
                 <a class="media-link link" href="">Instagram</a>
               </li>
@@ -74,9 +85,17 @@ We work quickly, carefully and with style."
             </ul>
           </div>
           <div class="hero-right-side">
-            <p class="uppertitle uppertitle-theme-dark">A hair salon for men in Kyiv</p>
-            <h1 class="main-title">BarberShop</h1>
-            <p class="hero-undertitle undertitle undertitle-theme-dark">
+            <p
+              class="hero-uppertitle uppertitle uppertitle-theme-dark"
+              style="--idx: 1; --shift: 1"
+            >
+              A hair salon for men in Kyiv
+            </p>
+            <h1 class="hero-title main-title" style="--idx: 1; --shift: 3">BarberShop</h1>
+            <p
+              class="hero-undertitle undertitle undertitle-theme-dark"
+              style="--idx: -1; --shift: 4"
+            >
               We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
             </p>
           </div>
@@ -439,6 +458,40 @@ We work quickly, carefully and with style."
         <div class="container contatcs-group-container">
           <section class="booking section">
             <h2 class="title title-theme-dark">Online-booking</h2>
+            <form class="booking-form" name="booking_form">
+              <div class="booking-form-wrapper">
+                <label class="booking-form-group">
+                  <input
+                    class="booking-form-field"
+                    type="text"
+                    name="user_name"
+                    placeholder="Antony Black"
+                  />
+                  <span class="booking-form-label">Name*</span>
+                </label>
+                <label class="booking-form-group">
+                  <input
+                    class="booking-form-field"
+                    type="tel"
+                    name="user_phone"
+                    placeholder="+38 (099) 123-45-67"
+                  />
+                  <span class="booking-form-label">Phone*</span>
+                </label>
+              </div>
+              <label class="booking-form-group" for="user_message">
+                <textarea
+                  class="booking-form-message"
+                  name="user_message"
+                  id="user_message"
+                  rows="5"
+                  placeholder="&nbsp;"
+                ></textarea>
+                <span class="booking-form-label">Message</span>
+              </label>
+
+              <button class="booking-form-btn btn btn-theme-dark" type="submit">Send</button>
+            </form>
           </section>
           <section class="contacts section" id="contacts">
             <h2 class="title title-theme-dark">Contacts</h2>
@@ -478,14 +531,14 @@ We work quickly, carefully and with style."
     </main>
     <!-- Footer section -->
     <footer class="footer">
-      <div class="container">
+      <div class="container footer-container">
         <p class="footer-copyright">&#169; Copyright 2020</p>
         <ul class="media-list list">
           <li class="media-item">
-            <a class="media-link link" href="">Instagram</a>
+            <a class="footer-media-link media-link link" href="">Instagram</a>
           </li>
           <li class="media-item">
-            <a class="media-link link" href="">Youtube</a>
+            <a class="footer-media-link media-link link" href="">Youtube</a>
           </li>
         </ul>
       </div>
@@ -499,9 +552,28 @@ We work quickly, carefully and with style."
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
+        <strong class="modal-title">Leave your info we will call you</strong>
+        <form class="modal-form" name="modal_form">
+          <label class="modal-form-label" for="user_name">Name</label>
+          <div class="modal-form-group">
+            <input class="modal-form-field" type="text" name="user_name" id="user_name" />
+            <svg class="modal-form-icon" width="20" height="20">
+              <use href="./images//icons.svg#avatar"></use>
+            </svg>
+          </div>
+
+          <label class="modal-form-agreement">
+            <input class="modal-form-checkbox" type="checkbox" />
+            <span class="modal-form-agreement-text"
+              >I agree with the mailing and accept
+              <a class="modal-form-link" href="">the Terms of the Agreement</a>
+            </span>
+          </label>
+        </form>
       </div>
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/header.js"></script>
   </body>
 </html>
