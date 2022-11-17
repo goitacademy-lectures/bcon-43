@@ -30,37 +30,38 @@ We work quickly, carefully and with style."
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
     <!-- Custom styles -->
+    <link rel="stylesheet" href="./css/main.min.css" />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <!-- Header section -->
     <header class="header" data-header>
-      <div class="container header-container">
-        <a class="header-logo" href="">
-          <svg class="header-img" width="68" height="58">
+      <div class="container header__container">
+        <a class="logo header__logo" href="">
+          <svg class="logo__img" width="68" height="58">
             <use href="./images/icons.svg#logo"></use>
           </svg>
         </a>
-        <nav class="header-nav">
-          <ul class="list header-list">
-            <li class="header-item">
-              <a class="header-nav-link current link" href="#about">About</a>
+        <nav class="nav">
+          <ul class="nav__list list">
+            <li class="nav__item">
+              <a class="nav__link nav__link--current link" href="#about">About</a>
             </li>
-            <li class="header-item">
-              <a class="header-nav-link link" href="#price">Services and prices</a>
+            <li class="nav__item">
+              <a class="nav__link link" href="#price">Services and prices</a>
             </li>
-            <li class="header-item">
-              <a class="header-nav-link link" href="#team">Barbers</a>
+            <li class="nav__item">
+              <a class="nav__link link" href="#team">Barbers</a>
             </li>
-            <li class="header-item">
-              <a class="header-nav-link link" href="#contacts">Contacts</a>
+            <li class="nav__item">
+              <a class="nav__link link" href="#contacts">Contacts</a>
             </li>
           </ul>
         </nav>
-        <div class="header-group">
-          <a class="header-contact link" href="tel:+380441111111">+38 044 111 11 11</a>
+        <div class="header__group">
+          <a class="header__contact link" href="tel:+380441111111">+38 044 111 11 11</a>
           <button
-            class="btn btn-theme-dark animate__animated animate__bounce animate__delay-2s"
+            class="btn btn--theme-dark animate__animated animate__bounce animate__delay-2s"
             type="button"
             data-modal-open
           >
@@ -73,43 +74,51 @@ We work quickly, carefully and with style."
     <main>
       <!-- Hero section -->
       <section class="hero">
-        <div class="container hero-container">
-          <div class="hero-left-side">
-            <ul class="hero-media-list media-list list">
-              <li class="media-item">
-                <a class="media-link link" href="">Instagram</a>
+        <div class="container hero__container">
+          <div class="hero__left-side">
+            <ul class="hero__media-list media-list list">
+              <li class="media-list__item">
+                <a class="media-list__link link" href="">Instagram</a>
               </li>
-              <li class="media-item">
-                <a class="media-link link" href="">Youtube</a>
+              <li class="media-list__item">
+                <a class="media-list__link link" href="">Youtube</a>
               </li>
             </ul>
           </div>
-          <div class="hero-right-side">
+          <div class="hero__right-side">
             <p
-              class="hero-uppertitle uppertitle uppertitle-theme-dark"
+              class="hero__uppertitle uppertitle uppertitle-theme-dark"
               style="--idx: 1; --shift: 1"
             >
               A hair salon for men in Kyiv
             </p>
-            <h1 class="hero-title main-title" style="--idx: 1; --shift: 3">BarberShop</h1>
+            <h1 class="hero__title main-title" style="--idx: 1; --shift: 3">BarberShop</h1>
             <p
-              class="hero-undertitle undertitle undertitle-theme-dark"
+              class="hero__undertitle undertitle undertitle-theme-dark"
               style="--idx: -1; --shift: 4"
             >
               We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
             </p>
           </div>
-          <ul class="hero-pagination list">
-            <li class="hero-pagination-item active"></li>
-            <li class="hero-pagination-item"></li>
-            <li class="hero-pagination-item"></li>
+          <ul class="slider-pagination list">
+            <li class="slider-pagination__item slider-pagination__item--active"></li>
+            <li class="slider-pagination__item"></li>
+            <li class="slider-pagination__item"></li>
           </ul>
-          <ul class="hero-controls list">
-            <li class="hero-controls-item">
-              <button class="hero-controls-btn prev" type="button" disabled>Back</button>
+          <ul class="slider-controls list">
+            <li class="slider-controls__item">
+              <button
+                class="slider-controls__btn slider-controls-btn--prev slider-controls__btn--disabled"
+                type="button"
+                disabled
+              >
+                Back
+              </button>
             </li>
-            <li class="hero-controls-item">
-              <button class="hero-controls-btn next" type="button">Forward</button>
+            <li class="slider-controls__item">
+              <button class="slider-controls__btn slider-controls__btn--next" type="button">
+                Forward
+              </button>
             </li>
           </ul>
         </div>
@@ -180,7 +189,7 @@ We work quickly, carefully and with style."
               </li>
             </ul>
           </div>
-          <button class="price-btn btn btn-theme-dark" type="button">online-booking</button>
+          <button class="price-btn btn btn--theme-dark" type="button">online-booking</button>
         </div>
       </section>
       <!-- Benefits section -->
@@ -490,7 +499,7 @@ We work quickly, carefully and with style."
                 <span class="booking-form-label">Message</span>
               </label>
 
-              <button class="booking-form-btn btn btn-theme-dark" type="submit">Send</button>
+              <button class="booking-form-btn btn btn--theme-dark" type="submit">Send</button>
             </form>
           </section>
           <section class="contacts section" id="contacts">
@@ -534,11 +543,11 @@ We work quickly, carefully and with style."
       <div class="container footer-container">
         <p class="footer-copyright">&#169; Copyright 2020</p>
         <ul class="media-list list">
-          <li class="media-item">
-            <a class="footer-media-link media-link link" href="">Instagram</a>
+          <li class="media-list__item">
+            <a class="footer-media-link media-list__link link" href="">Instagram</a>
           </li>
-          <li class="media-item">
-            <a class="footer-media-link media-link link" href="">Youtube</a>
+          <li class="media-list__item">
+            <a class="footer-media-link media-list__link link" href="">Youtube</a>
           </li>
         </ul>
       </div>
