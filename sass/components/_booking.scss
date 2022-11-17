@@ -1,0 +1,117 @@
+/**
+  |============================
+  | Booking
+  |============================
+*/
+.contatcs-group {
+  max-width: 1600px;
+  margin: 0 auto;
+
+  background-color: var(--dark-bg-cl);
+  background-image: url(../images/booking/bg-img.png);
+  background-repeat: no-repeat;
+  background-position: top 50% left calc(50% + 393px);
+}
+
+.contatcs-group-container {
+  display: flex;
+  gap: 30px;
+}
+
+.booking {
+  flex-basis: 570px;
+}
+
+.booking-form-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  margin-bottom: 44px;
+}
+
+.booking-form-group {
+  position: relative;
+  display: block;
+  flex-basis: 270px;
+}
+
+.booking-form-field {
+  width: 100%;
+  height: 24px;
+
+  font-size: 12px;
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  outline: unset;
+
+  transition: border-color 300ms;
+}
+
+.booking-form-field:focus,
+.booking-form-field:not(:placeholder-shown) {
+  border-color: #ffffff;
+}
+
+.booking-form-field::placeholder {
+  opacity: 0;
+  font-size: 12px;
+  line-height: calc(15 / 12);
+  letter-spacing: 0.1em;
+
+  transition: opacity 300ms ease;
+}
+
+.booking-form-field:focus::placeholder {
+  opacity: 1;
+  transition-delay: 150ms;
+}
+
+.booking-form-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: rgba(157, 164, 189, 0.4);
+  transition: transform 300ms;
+  transform-origin: left;
+}
+
+.booking-form-field:focus + .booking-form-label,
+.booking-form-field:not(:placeholder-shown) + .booking-form-label,
+.booking-form-message:focus + .booking-form-label,
+.booking-form-message:not(:placeholder-shown) + .booking-form-label {
+  color: #ffffff;
+  transform: translateY(-100%) scale(0.8);
+}
+
+.booking-form-message {
+  display: block;
+  width: 100%;
+  height: 76px;
+
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  outline: unset;
+
+  transition: border-color 300ms;
+}
+
+.booking-form-message:focus,
+.booking-form-message:not(:placeholder-shown) {
+  border-color: #ffffff;
+}
+
+.booking-form-btn {
+  margin-top: 44px;
+}

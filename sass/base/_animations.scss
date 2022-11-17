@@ -1,0 +1,46 @@
+/**
+  |============================
+  | animation
+  |============================
+*/
+@keyframes vertical-move {
+  0% {
+    transform: translateY(calc(-100px * var(--idx)));
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes horisontal-move {
+  0% {
+    transform: translateX(calc(-200px * var(--idx)));
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes tracking-in-contract-bck {
+  0% {
+    letter-spacing: 1em;
+    transform: translateZ(800px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}

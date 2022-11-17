@@ -1,0 +1,50 @@
+/**
+  |============================
+  | Contatcs
+  |============================
+*/
+.contacts {
+  flex-basis: 570px;
+  padding-left: 100px;
+}
+.contacts-address {
+  margin-bottom: 70px;
+  font-style: normal;
+}
+
+.contacts-item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.contacts-link {
+  color: var(--grey-cl);
+}
+
+.contacts-uppertitle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: var(--light-txt-cl);
+}
+
+.contacts-uppertitle::before {
+  content: '';
+
+  display: block;
+  margin-right: 20px;
+  width: 60px;
+  height: 1px;
+
+  background-color: rgba(157, 164, 189, 0.4);
+}
+
+.contacts-schedule {
+  color: var(--grey-cl);
+}
