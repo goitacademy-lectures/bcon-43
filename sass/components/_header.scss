@@ -1,0 +1,56 @@
+/**
+  |============================
+  | Header
+  |============================
+*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  z-index: 10;
+
+  background-image: linear-gradient(rgba(25, 28, 38, 0.8), transparent 96%);
+  background-position: top -130px left 50%;
+  background-repeat: no-repeat;
+
+  transition: background-position var(--trns-fast), backdrop-filter var(--trns-fast) 300ms;
+}
+.header--transparency {
+  background-position: top 0 left 50%;
+  backdrop-filter: blur(2px);
+}
+.header__container {
+  display: flex;
+  align-items: center;
+}
+.header__logo {
+  margin-right: 131px;
+}
+.header__group {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+}
+.header__contact {
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-right: 40px;
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+
+  color: var(--light-txt-cl);
+
+  transition: color var(--trns-fast);
+}
+.header__contact:hover,
+.header__contact:focus {
+  color: var(--accent-txt-cl);
+}
