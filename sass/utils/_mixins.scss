@@ -1,0 +1,28 @@
+@import './decimals';
+
+@mixin section($pt: 120px, $pb: $pt) {
+  padding-top: $pt;
+  padding-bottom: $pb;
+}
+
+@mixin fonts($fs: false, $lh: false, $fw: false, $ls: 0.02em) {
+  @if ($fw) {
+    font-weight: $fw;
+  }
+  @if ($fs) {
+    font-size: $fs;
+  }
+  @if ($lh) {
+    line-height: decimal-round($lh / $fs);
+  }
+  @if ($ls) {
+    letter-spacing: $ls;
+  }
+}
+
+@mixin truncate($truncation-boundary) {
+  max-width: $truncation-boundary;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

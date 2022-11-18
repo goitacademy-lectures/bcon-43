@@ -3,6 +3,9 @@
   | About
   |============================
 */
+.about {
+  @include section;
+}
 .about-container {
   display: flex;
   gap: 30px;

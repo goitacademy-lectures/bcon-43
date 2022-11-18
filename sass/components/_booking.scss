@@ -19,6 +19,8 @@
 }
 
 .booking {
+  @include section;
+
   flex-basis: 570px;
 }
 

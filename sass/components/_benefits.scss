@@ -1,8 +1,7 @@
-/**
-  |============================
-  | Benefits
-  |============================
-*/
+.benefits {
+  @include section;
+}
+
 .benefits-container {
   display: flex;
   gap: 30px;

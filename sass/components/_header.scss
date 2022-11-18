@@ -36,6 +36,8 @@
   padding-right: 20px;
 }
 .header__contact {
+  @extend %link;
+
   display: block;
   padding-top: 20px;
   padding-bottom: 20px;
