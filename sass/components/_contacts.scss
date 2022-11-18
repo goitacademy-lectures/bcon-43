@@ -4,6 +4,8 @@
   |============================
 */
 .contacts {
+  @include section;
+
   flex-basis: 570px;
   padding-left: 100px;
 }
@@ -17,6 +19,8 @@
 }
 
 .contacts-link {
+  @extend %link;
+
   color: var(--grey-cl);
 }
 

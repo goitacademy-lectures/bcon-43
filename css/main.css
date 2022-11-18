@@ -34,6 +34,11 @@
   overflow: hidden;
 }
 
+.contacts-link, .socials-link, .header__contact {
+  text-decoration: none;
+  color: currentColor;
+}
+
 /**
   |============================
   | Base styles
@@ -99,7 +104,7 @@ img {
   margin-bottom: 20px;
   font-weight: 600;
   font-size: 11px;
-  line-height: 1.3636363636;
+  line-height: 1.36;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -136,6 +141,9 @@ img {
 
 .undertitle {
   margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
   color: var(--dark-txt-cl);
 }
 
@@ -143,11 +151,6 @@ img {
   color: var(--grey-cl);
 }
 
-/**
-  |============================
-  | Card set
-  |============================
-*/
 .card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -611,6 +614,11 @@ img {
   | About
   |============================
 */
+.about {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
 .about-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -653,12 +661,9 @@ img {
   color: var(--dark-txt-cl);
 }
 
-/**
-  |============================
-  | Price
-  |============================
-*/
 .price {
+  padding-top: 120px;
+  padding-bottom: 120px;
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
@@ -723,11 +728,11 @@ img {
   margin-right: auto;
 }
 
-/**
-  |============================
-  | Benefits
-  |============================
-*/
+.benefits {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
 .benefits-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -802,12 +807,9 @@ img {
   color: #303030;
 }
 
-/**
-  |============================
-  | Team
-  |============================
-*/
 .team {
+  padding-top: 120px;
+  padding-bottom: 120px;
   background-color: #f7f7f7;
 }
 
@@ -874,11 +876,11 @@ img {
   fill: currentColor;
 }
 
-/**
-  |============================
-  | Gallery
-  |============================
-*/
+.gallery {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
 .gallery-item {
   position: relative;
   overflow: hidden;
@@ -939,6 +941,8 @@ img {
 }
 
 .booking {
+  padding-top: 120px;
+  padding-bottom: 120px;
   -ms-flex-preferred-size: 570px;
       flex-basis: 570px;
 }
@@ -1132,6 +1136,8 @@ img {
   |============================
 */
 .contacts {
+  padding-top: 120px;
+  padding-bottom: 120px;
   -ms-flex-preferred-size: 570px;
       flex-basis: 570px;
   padding-left: 100px;
