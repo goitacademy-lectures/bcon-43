@@ -1,5 +1,10 @@
 .nav {
-  margin-right: auto;
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    margin-right: auto;
+  }
 }
 .nav__list {
   display: flex;
