@@ -67,12 +67,17 @@ We work quickly, carefully and with style."
             Online-booking
           </button>
         </div>
+        <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="menu-toggle__icon" width="24" height="24">
+            <use href="./images/icons.svg#burger-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <!-- Main section -->
     <main>
       <!-- Hero section -->
-      <section class="hero">
+      <!-- <section class="hero">
         <div class="container hero__container">
           <div class="hero__left-side">
             <ul class="hero__media-list media-list list">
@@ -121,9 +126,9 @@ We work quickly, carefully and with style."
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!-- About section -->
-      <section class="about" id="about">
+      <!-- <section class="about" id="about">
         <div class="container about-container">
           <ul class="about-list list">
             <li class="about-item">
@@ -163,7 +168,7 @@ We work quickly, carefully and with style."
             <button class="btn" type="button">online-booking</button>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- Price section -->
       <section class="price" id="price">
         <div class="container">
@@ -195,7 +200,7 @@ We work quickly, carefully and with style."
         </div>
       </section>
       <!-- Benefits section -->
-      <section class="benefits">
+      <!-- <section class="benefits">
         <div class="container benefits-container">
           <div class="benefits-left-side">
             <ul class="benefits-list list">
@@ -226,9 +231,9 @@ We work quickly, carefully and with style."
             </p>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- Team section -->
-      <section class="team" id="team">
+      <!-- <section class="team" id="team">
         <div class="container">
           <p class="uppertitle">for true enjoyers of the atmosphere</p>
           <h2 class="title">Our barbers</h2>
@@ -412,9 +417,9 @@ We work quickly, carefully and with style."
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!-- Gallery section -->
-      <section class="gallery">
+      <!-- <section class="gallery">
         <div class="container">
           <p class="uppertitle">in Latin, "barba" means "beard"</p>
           <h2 hidden>Our gallery</h2>
@@ -463,9 +468,9 @@ We work quickly, carefully and with style."
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!-- Booking & Contatcs sections -->
-      <div class="contatcs-group">
+      <!-- <div class="contatcs-group">
         <div class="container contatcs-group-container">
           <section class="booking">
             <h2 class="title title-theme-dark">Online-booking</h2>
@@ -538,10 +543,10 @@ We work quickly, carefully and with style."
             </div>
           </section>
         </div>
-      </div>
+      </div> -->
     </main>
     <!-- Footer section -->
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container footer-container">
         <p class="footer-copyright">&#169; Copyright 2020</p>
         <ul class="media-list list">
@@ -553,7 +558,7 @@ We work quickly, carefully and with style."
           </li>
         </ul>
       </div>
-    </footer>
+    </footer> -->
 
     <!-- Modal window -->
     <div class="backdrop is-hidden" data-modal>
@@ -583,8 +588,59 @@ We work quickly, carefully and with style."
         </form>
       </div>
     </div>
+    <!-- Mobile menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg class="menu-toggle__icon" width="24" height="24">
+          <use href="./images/icons.svg#icon-cross"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu list">
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link current" href="">Студія</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link" href="">Портфоліо</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link" href="">Контакти</a>
+        </li>
+      </ul>
+
+      <ul class="mobile-contacts list">
+        <li class="mobile-contacts-item">
+          <a class="mobile-contacts-link accent link" href="">+38 096 111 11 11</a>
+        </li>
+        <li class="mobile-contacts-item">
+          <a class="mobile-contacts-link link" href="">info@devstudio.com</a>
+        </li>
+      </ul>
+
+      <ul class="mobile-socials list">
+        <li class="mobile-socials-item">
+          <a href="" class="mobile-socials-link link">Instagram</a>
+        </li>
+        <li class="mobile-socials-item">
+          <a href="" class="mobile-socials-link link">Twitter</a>
+        </li>
+        <li class="mobile-socials-item">
+          <a href="" class="mobile-socials-link link">Facebook</a>
+        </li>
+        <li class="mobile-socials-item">
+          <a href="" class="mobile-socials-link link">LinkedIn</a>
+        </li>
+      </ul>
+    </div>
 
     <script src="./js/modal.js"></script>
     <script src="./js/header.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

@@ -44,9 +44,13 @@
   margin-bottom: 20px;
 
   font-family: var(--secondary-font);
-  font-size: 42px;
+  font-size: 28px;
   line-height: calc(49 / 42);
   letter-spacing: 0.05em;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 42px;
+  }
 }
 
 .title-theme-dark {
