@@ -39,6 +39,12 @@
   color: currentColor;
 }
 
+.gallery-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .price {
   padding-top: 84px;
   padding-bottom: 84px;
@@ -56,11 +62,14 @@
   }
 }
 
-/**
-  |============================
-  | Base styles
-  |============================
-*/
+.team-name {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.3888888889;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
 body {
   font-family: var(--main-font);
   color: var(--main-txt-cl);
@@ -69,7 +78,6 @@ body {
   letter-spacing: 0.02em;
 }
 
-/* reset */
 h1,
 h2,
 h3,
@@ -179,12 +187,12 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: var(--indent);
+  gap: var(--indent, 30px);
 }
 
 .card-item {
-  -ms-flex-preferred-size: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
-      flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+  -ms-flex-preferred-size: calc((100% - var(--indent, 30px) * (var(--items, 4) - 1)) / var(--items, 4));
+      flex-basis: calc((100% - var(--indent, 30px) * (var(--items, 4) - 1)) / var(--items, 4));
 }
 
 /**
@@ -708,10 +716,35 @@ img {
   margin-left: auto;
   margin-right: auto;
   background-color: var(--dark-bg-cl);
-  background-image: url(../images/price/img.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-image: url(../images/price/img_sm@1x.png);
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .price {
+    background-image: url(../images/price/img_sm@2x.png);
+  }
+}
+@media screen and (min-width: 768px) {
+  .price {
+    background-image: url(../images/price/img_md@1x.png);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .price {
+    background-image: url(../images/price/img_md@2x.png);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .price {
+    background-image: url(../images/price/img_lg@1x.png);
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .price {
+    background-image: url(../images/price/img_lg@2x.png);
+  }
 }
 
 .price-block {
@@ -889,19 +922,45 @@ img {
   background-color: #f7f7f7;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .team-container {
+    width: 480px;
+  }
+}
+
 .team-list {
-  --items: 3;
-  --indent: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 64px;
+}
+@media screen and (min-width: 1200px) {
+  .team-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+
+.team-item {
+  -ms-flex-preferred-size: calc((100% - 0px) / 1);
+      flex-basis: calc((100% - 0px) / 1);
+}
+@media screen and (min-width: 1200px) {
+  .team-item {
+    -ms-flex-preferred-size: calc((100% - 60px) / 3);
+        flex-basis: calc((100% - 60px) / 3);
+  }
 }
 
 .team-name {
   margin-top: 30px;
   margin-bottom: 8px;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.3888888889;
-  text-align: center;
-  letter-spacing: 0.02em;
 }
 
 .team-position {
@@ -957,9 +1016,32 @@ img {
   padding-bottom: 84px;
 }
 
+.gallery-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
+}
+
 .gallery-item {
+  -ms-flex-preferred-size: calc((100% - 0px) / 1);
+      flex-basis: calc((100% - 0px) / 1);
   position: relative;
   overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .gallery-item {
+    -ms-flex-preferred-size: calc((100% - 30px) / 2);
+        flex-basis: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .gallery-item {
+    -ms-flex-preferred-size: calc((100% - 90px) / 4);
+        flex-basis: calc((100% - 90px) / 4);
+  }
 }
 
 .overlay {

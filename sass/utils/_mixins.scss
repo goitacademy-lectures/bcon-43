@@ -26,3 +26,13 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+@mixin card-set($indent: 30px) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $indent;
+}
+
+@mixin card-set-item($items: 1, $indent: 30px) {
+  flex-basis: calc((100% - $indent * ($items - 1)) / $items);
+}
