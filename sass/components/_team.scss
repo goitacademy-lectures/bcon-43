@@ -4,20 +4,33 @@
   background-color: #f7f7f7;
 }
 
+.team-container {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 480px;
+  }
+}
+
 .team-list {
-  --items: 3;
-  --indent: 50px;
+  @include card-set(64px);
+
+  @media screen and (min-width: 1200px) {
+    @include card-set(30px);
+  }
+}
+
+.team-item {
+  @include card-set-item;
+
+  @media screen and (min-width: 1200px) {
+    @include card-set-item(3);
+  }
 }
 
 .team-name {
   margin-top: 30px;
   margin-bottom: 8px;
 
-  font-weight: 400;
-  font-size: 18px;
-  line-height: calc(25 / 18);
-  text-align: center;
-  letter-spacing: 0.02em;
+  @extend %team-title;
 }
 
 .team-position {
